@@ -1,45 +1,25 @@
 <template>
   <div id="app">
-    <div class="row">
-      <MwButton type="" @click="fn" disabled>默认按钮</MwButton>
-      <MwButton type="primary">主要按钮</MwButton>
-      <MwButton type="success">成功按钮</MwButton>
-      <MwButton type="info">信息按钮</MwButton>
-      <MwButton type="warning">警告按钮</MwButton>
-      <MwButton type="danger">危险按钮</MwButton>
-    </div>
-    <div class="row">
-      <MwButton plain type="">朴素按钮</MwButton>
-      <MwButton plain type="primary">主要按钮</MwButton>
-      <MwButton plain type="success">成功按钮</MwButton>
-      <MwButton plain type="info">信息按钮</MwButton>
-      <MwButton plain type="warning">警告按钮</MwButton>
-      <MwButton plain type="danger">危险按钮</MwButton>
-    </div>
-    <div class="row">
-      <MwButton round type="">圆角按钮</MwButton>
-      <MwButton round type="primary">主要按钮</MwButton>
-      <MwButton round type="success">成功按钮</MwButton>
-      <MwButton round type="info">信息按钮</MwButton>
-      <MwButton round type="warning">警告按钮</MwButton>
-      <MwButton round type="danger">危险按钮</MwButton>
-    </div>
-    <div class="row">
-      <MwButton circle icon="mw-icon-bluetoothoff" type=""></MwButton>
-      <MwButton circle icon="mw-icon-bluetoothoff" type="primary"></MwButton>
-      <MwButton circle icon="mw-icon-bluetoothoff" type="success"></MwButton>
-      <MwButton circle icon="mw-icon-bluetoothoff" type="info"></MwButton>
-      <MwButton circle icon="mw-icon-bluetoothoff" type="warning"></MwButton>
-      <MwButton circle icon="mw-icon-bluetoothoff" type="danger"></MwButton>
-    </div>
+    <mw-dialog title="温馨提示" :visible.sync='visible'>
+      <p>天气很热诶</p>
+      <template #footer>
+        <mw-button @click="visible=false">取消</mw-button>
+        <mw-button type="primary" @click="visible=false">确定</mw-button>
+      </template>
+    </mw-dialog>
   </div>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      visible: true
+    }
+  },
   methods: {
-    fn () {
-      console.log('i an fine')
+    close () {
+      this.visible = false
     }
   }
 }
