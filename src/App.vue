@@ -1,12 +1,8 @@
 <template>
   <div id="app">
-    <mw-dialog title="温馨提示" :visible.sync='visible'>
-      <p>天气很热诶</p>
-      <template #footer>
-        <mw-button @click="visible=false">取消</mw-button>
-        <mw-button type="primary" @click="visible=false">确定</mw-button>
-      </template>
-    </mw-dialog>
+    <mw-input type="text" placeholder="I am fine"></mw-input>
+    <mw-input type="text" placeholder="I am fine" v-model="value" clearable></mw-input>
+    <mw-input type="password" v-model="value" showPassword></mw-input>
   </div>
 </template>
 
@@ -14,22 +10,14 @@
 export default {
   data () {
     return {
-      visible: true
-    }
-  },
-  methods: {
-    close () {
-      this.visible = false
+      value: '123'
     }
   }
 }
 </script>
 
 <style lang="scss">
-.row {
-  margin-bottom: 20px;
-  .mw-button {
-    margin-right: 20px;
-  }
+#app {
+  width: 30%;
 }
 </style>
