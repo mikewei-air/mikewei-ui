@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <mw-switch v-model="active" name="01"></mw-switch>
+    <mw-radio v-model="gender" label="1">boy</mw-radio>
+    <mw-radio v-model="gender" label="0">girl</mw-radio>
+    <mw-radio v-model="gender" label="1"></mw-radio>
+    <mw-radio v-model="gender" label="0"></mw-radio>
   </div>
 </template>
 
@@ -8,7 +11,7 @@
 export default {
   data () {
     return {
-      active: false
+      gender: 1
     }
   }
 }
