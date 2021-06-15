@@ -1,11 +1,13 @@
 <template>
   <div id="app">
-    <mw-radio v-model="gender" label="1">boy</mw-radio>
-    <mw-radio v-model="gender" label="0">girl</mw-radio>
-    <mw-radio-group v-model="gender">
-    <mw-radio label="1"></mw-radio>
-    <mw-radio label="0"></mw-radio>
-    </mw-radio-group>
+    <mw-checkbox label="1" v-model="active">西瓜</mw-checkbox>
+
+    <mw-checkbox-group v-model="language">
+    <mw-checkbox label="python" ></mw-checkbox>
+    <mw-checkbox label="JS"></mw-checkbox>
+    <mw-checkbox label="C"></mw-checkbox>
+    <mw-checkbox label="Java"></mw-checkbox>
+    </mw-checkbox-group>
   </div>
 </template>
 
@@ -13,12 +15,13 @@
 export default {
   data () {
     return {
-      gender: 1
+      active: false,
+      language: []
     }
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 </style>

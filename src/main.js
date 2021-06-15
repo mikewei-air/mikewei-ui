@@ -6,6 +6,8 @@ import MwInput from './components/input.vue'
 import MwSwitch from './components/switch.vue'
 import MwRadio from './components/radio.vue'
 import MwRadioGroup from './components/radio-group.vue'
+import MwCheckbox from './components/checkbox.vue'
+import MwCheckboxGroup from './components/checkbox-group.vue'
 import './assets/fonts/iconfont.scss'
 Vue.config.productionTip = false
 
@@ -15,6 +17,8 @@ Vue.component(MwInput.name, MwInput)
 Vue.component(MwSwitch.name, MwSwitch)
 Vue.component(MwRadio.name, MwRadio)
 Vue.component(MwRadioGroup.name, MwRadioGroup)
+Vue.component(MwCheckbox.name, MwCheckbox)
+Vue.component(MwCheckboxGroup.name, MwCheckboxGroup)
 new Vue({
     render: h => h(App)
 }).$mount('#app')
