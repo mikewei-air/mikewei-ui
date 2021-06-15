@@ -1,5 +1,5 @@
 <template>
-  <label class="mw-radio" :class="{'is-checked': label === value}">
+  <label class="mw-radio" :class="{'is-checked': label === model}">
     <span class="mw-radio_input">
       <span class="mw-radio_inner"></span>
       <!-- model定义在计算属性中，用get和set函数组合来实现对父组件value值的更新 -->
@@ -27,14 +27,23 @@ export default {
             default: ''
         }
     },
+    inject: {
+      RadioGroup: {
+        default: ''
+      }
+    },
     computed: {
         model: {
             get () {
-                return this.value
+                return this.isGroup ? this.RadioGroup.value : this.value
             },
             set (value) {
-                this.$emit('input', value)
+                this.isGroup ? this.RadioGroup.$emit('input', value) : this.$emit('input', value)
             }
+        },
+        isGroup () {
+          // 判断radio组件是否通过被包裹的方式使用
+          return !!this.RadioGroup
         }
     }
 }
