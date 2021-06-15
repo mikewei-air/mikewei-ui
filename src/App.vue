@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <mw-input type="text" placeholder="I am fine"></mw-input>
-    <mw-input type="text" placeholder="I am fine" v-model="value" clearable></mw-input>
-    <mw-input type="password" v-model="value" showPassword></mw-input>
+    <mw-switch v-model="active" name="01"></mw-switch>
   </div>
 </template>
 
@@ -10,14 +8,12 @@
 export default {
   data () {
     return {
-      value: '123'
+      active: false
     }
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  width: 30%;
-}
+
 </style>
