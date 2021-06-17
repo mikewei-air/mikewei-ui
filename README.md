@@ -1,4 +1,4 @@
-本项目仅作为vue组件封装的练习参考
+本项目参照element-ui组件风格，进行组件封装，已经发布在npm上
 
 初始化vue项目
    vue created demo
