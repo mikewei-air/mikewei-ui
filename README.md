@@ -8,6 +8,5 @@
 
 全局导入
    import MikeweiUI form 'mikewei-ui'
-   import 'mikewei-ui/lib/mikewei.css'
 
    Vue.use(MikeweiUI)
