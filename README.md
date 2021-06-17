@@ -7,6 +7,6 @@
    npm install mikewei-ui
 
 全局导入
-   import MikeweiUI form 'mikewei-ui'
+   import MikeweiUI from 'mikewei-ui'
 
    Vue.use(MikeweiUI)
